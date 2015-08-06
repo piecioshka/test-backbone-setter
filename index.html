@@ -1,0 +1,31 @@
+<script src="node_modules/backbone/node_modules/underscore/underscore.js"></script>
+<script src="node_modules/backbone/backbone.js"></script>
+<script>
+    (function (root) {
+        'use strict';
+
+        var Model = root.Backbone.Model.extend({
+            constructor: function () {
+                var properties = {
+                    active: false
+                };
+
+                Object.defineProperty(this, 'active', {
+                    set: function (value) {
+                        properties.active = value;
+                    },
+                    get: function () {
+                        return properties.active;
+                    }
+                });
+            }
+        });
+
+        var v = new Model();
+
+        console.log(v.active);
+        v.active = true;
+        console.log(v.active);
+
+    }(this));
+</script>
