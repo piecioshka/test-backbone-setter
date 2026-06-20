@@ -12,3 +12,7 @@ Test app with private properties with Backbone.
     ```
 
 2. Open `index.html` in browser.
+
+## License
+
+[The MIT License](http://piecioshka.mit-license.org) @ 2026
